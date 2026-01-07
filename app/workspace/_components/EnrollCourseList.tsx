@@ -22,7 +22,7 @@ function EnrollCourseList() {
     try {
       setLoading(true);
       const res = await axios.get("/api/enroll-course/");
-     
+
       setLoading(false);
       setEnrolledCourses(res.data);
     } catch (error) {
@@ -35,7 +35,7 @@ function EnrollCourseList() {
       <h2 className="text-2xl font-bold">O'rganayotgan kurslaringiz</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-5 mt-5">
-        {enrolledCourses.map((cours) => (
+        {enrolledCourses?.map((cours) => (
           <EnrollCourseCard
             key={cours.id}
             courses={cours?.courses}

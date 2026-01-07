@@ -36,7 +36,7 @@ const items = [
   },
   {
     title: "Kurs yaratish haqida",
-    url: "/tools",
+    url: "/#",
     icon: PencilRulerIcon,
   },
   {
