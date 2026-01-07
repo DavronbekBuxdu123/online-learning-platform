@@ -9,13 +9,13 @@ type EnrollCourseCardProps = {
   enrolledcourse: Enroll;
 };
 function EnrollCourseCard({ courses, enrolledcourse }: EnrollCourseCardProps) {
-
   const CourseView = courses.courseJson.course;
   const ProgressResults = () => {
     const result =
-      (enrolledcourse?.completedChapters.length / courses?.chapters) * 100;
+      (enrolledcourse?.completedChapters?.length / courses?.chapters) * 100;
     return Math.round(result);
   };
+  console.log(Number.isNaN(ProgressResults()) ? 0 : "");
   return (
     <div className="shadow-md  rounded-xl cursor-pointer flex flex-col justify-between h-full dark:bg-[#091544] dark:shadow-[#992edb]  ">
       <div>
@@ -33,7 +33,7 @@ function EnrollCourseCard({ courses, enrolledcourse }: EnrollCourseCardProps) {
       </div>
       <div className="px-5 flex items-center justify-between text-purple-500">
         <p>Natija</p>
-        <p>{ProgressResults()}%</p>
+        <p>{Number.isNaN(ProgressResults()) ? 0 : ProgressResults()}%</p>
       </div>
       <div className="px-5">
         <Progress className="[&>div]:bg-[#992edb]" value={ProgressResults()} />
