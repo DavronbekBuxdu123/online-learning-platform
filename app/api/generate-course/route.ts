@@ -12,6 +12,14 @@ export async function POST(req: NextRequest) {
 Genrate Learning Course depends on following details. In which Make sure to add Course Name, Description, Course Banner Image Prompt (Create a modern, flat-style 2D digital illustration representing user Topic. Include UI/UX elements such as mockup screens, text blocks, icons, buttons, and creative workspace tools. Add symbolic elements related to user Course, like sticky notes, design components, and visual aids. Use a vibrant color palette (blues, purples, oranges) with a clean, professional look. The illustration should feel creative, tech-savvy, and educational, ideal for visualizing concepts in user Course) for Course Banner in 3d format Chapter Name,, Topic under each chapters, Duration for each chapters etc, in JSON format only Schema:
 Generate a complete learning course using the following user input.
 Output JSON ONLY, do not include explanations, notes, or markdown.
+The course must include:
+- A creative and catchy course name
+- A detailed course description
+- Course category and difficulty level
+- Whether to include videos
+- Number of chapters (5-10 recommended)
+- Each chapter must have: chapter number, chapter name, chapter description, duration in minutes, and 3-5 topics
+- A creative 3D banner image prompt that visually represents the course with UI/UX elements, sticky notes, design components, and vibrant colors (blues, purples, oranges)
 
 User Input:
 ${JSON.stringify(formData, null, 2)}
