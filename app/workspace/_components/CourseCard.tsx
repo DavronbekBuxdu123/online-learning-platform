@@ -43,6 +43,7 @@ function CourseCard({ course }: { course: CourseInfoType }) {
         return;
       }
       toast.success("Kursga muvaffiqiyatli qo'shildingiz!");
+      setLoading(false);
     } catch (error) {
       console.log(error);
       toast.error("Xatolik yuz berdi!");
