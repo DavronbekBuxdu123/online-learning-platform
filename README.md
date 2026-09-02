@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 AI-Powered Online Learning Platform
 
-## Getting Started
+An AI-driven course generation and online learning platform built with Next.js, Drizzle ORM, Neon Serverless PostgreSQL, Clerk Authentication, and Google Gemini AI.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌐 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **Deployment URL:** [online-learning-platform-six-lovat.vercel.app](https://online-learning-platform-six-lovat.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Key Features
 
-## Learn More
+* **AI Course Generation:** Automated course creation, structure, and chapter outlines powered by Google Gemini and Groq APIs.
+* **Course & Workspace Management:** Interactive learning dashboard to manage courses, track progress, and view chapters.
+* **Secure Authentication:** User signup, signin, and role management handled by Clerk (`@clerk/nextjs`).
+* **Database Persistence:** Fast and type-safe relational database management using Drizzle ORM with Neon Serverless PostgreSQL.
+* **Modern UI & Media Player:** Accessible Radix UI components, custom syntax highlighting, and integrated YouTube media player (`react-youtube`).
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* **Framework:** Next.js (App Router), React
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS, Radix UI Primitives, Lucide Icons
+* **Database & ORM:** Neon Serverless PostgreSQL, Drizzle ORM
+* **Authentication:** Clerk
+* **AI Integrations:** Google Generative AI (`@google/genai`), Groq SDK, OpenRouter
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 How to Run
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   `git clone https://github.com/DavronbekBuxdu123/online-learning-platform.git`
+   `cd online-learning-platform`
+
+2. **Install dependencies:**
+   `npm install`
+
+3. **Configure environment variables:**
+   Create a `.env.local` file in the root directory and add your credentials:
+   `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key`
+   `CLERK_SECRET_KEY=your_clerk_secret`
+   `NEXT_PUBLIC_DRIZZLE_DB_URL=your_neon_db_url`
+   `NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_key`
+
+4. **Run database migrations:**
+   `npx drizzle-kit push`
+
+5. **Start the development server:**
+   `npm run dev`
